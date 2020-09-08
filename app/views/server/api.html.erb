@@ -1,0 +1,46 @@
+<h1>Server#api</h1>
+<p>Find me in app/views/server/api.html.erb</p>
+<% if !@key.nil? %>
+
+Your key: 
+<%= @key.hash_key %>
+
+<% end %>
+<br>
+<button id="create_new_key">
+Create new Key
+</button>
+
+<%= link_to  "Sair", destroy_user_session_path, method: :delete %>
+
+<script>
+var btn = document.getElementById('create_new_key')
+btn.addEventListener('click', ()=>{
+    console.log('clicked!')
+    // Set up our HTTP request
+    var xhr = new XMLHttpRequest();
+
+    // Setup our listener to process completed requests
+    xhr.onload = function () {
+
+        // Process our return data
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // What do when the request is successful
+            console.log('success!', xhr);
+        } else {
+            // What do when the request fails
+            console.log('The request failed!');
+        }
+
+        // Code that should run regardless of the request status
+        console.log('This always runs...');
+    };
+
+    // Create and send a GET request
+    // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+    // The second argument is the endpoint URL
+    xhr.open('GET', '/get_key');
+    xhr.send();
+})
+
+</script>
