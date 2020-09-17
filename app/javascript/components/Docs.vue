@@ -7,7 +7,7 @@
     </p>
     <h2>Using the API</h2>
     <p>You'll need:<br>1 - User Account<br>2 - API Key<br>3 - Any HTTP request software</p>
-    <p>First, create your account and generate your API Key. Both can be made on the API Key section.</a><br>
+    <p>First, create your account and generate your API Key. Both can be made on the API Key section<br>
     After that, you can use your API Key to make request to the server.<br>
     </p>  
     <h2>End Points</h2>
